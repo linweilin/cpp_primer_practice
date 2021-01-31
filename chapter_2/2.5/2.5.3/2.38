@@ -1,0 +1,7 @@
+auto: 由变量值的类型来推断
+decltype: 由函数返回值、变量值的类型或者表达式的结果来推断类型。
+
+Eg:
+auto a = 1;
+decltype(a) b = a;      // 与auto相同
+decltype((a)) c = a;      // 与auto不同 
