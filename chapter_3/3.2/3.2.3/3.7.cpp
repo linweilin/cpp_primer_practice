@@ -11,7 +11,10 @@ int main() {
     while(cin >> str) {
 
         if(!str.empty())
-            for(auto &c : str)
+            // key word auto is modified to char.
+            // Nothing will happen because here the auto type is exactlt char.
+            // for(auto &c : str)
+            for(char &c : str)
                 c = 'X';
         cout << str << endl;
     }
