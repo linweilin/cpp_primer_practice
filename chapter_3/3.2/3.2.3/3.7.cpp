@@ -12,7 +12,7 @@ int main() {
 
         if(!str.empty())
             // key word auto is modified to char.
-            // Nothing will happen because here the auto type is exactlt char.
+            // Nothing will happen because here the auto type is exactly char.
             // for(auto &c : str)
             for(char &c : str)
                 c = 'X';
