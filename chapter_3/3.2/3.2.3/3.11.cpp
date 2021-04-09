@@ -1,5 +1,5 @@
-/* 虽然是对const取引用，但是如果不修改其值，仍能正常编译。
- * 类型是char
+/* 合法。虽然是对const取引用，但是如果不修改其值，仍能正常编译。
+ * c的推断类型是char的常量引用
  */
 #include <iostream>
 #include <string>
