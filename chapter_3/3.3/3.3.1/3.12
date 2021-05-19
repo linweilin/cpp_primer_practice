@@ -1,3 +1,3 @@
 (a) vector<vector<int>> ivec; 正确，执行结果为定义一个空的vector，其对象是vector<int>类型
 (b) vector<string> svec = ivec; 错误。执行拷贝构造时需要相同类型，svec中存储的对象时string，而ivec中的对象是vector<int>
-(c) vector<string> svec (10, "null"); 正确。svec中有10k个空的string对象
+(c) vector<string> svec (10, "null"); 正确。svec中有10个空的string对象
