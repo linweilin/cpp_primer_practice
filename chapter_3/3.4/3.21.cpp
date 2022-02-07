@@ -11,33 +11,32 @@
 #include <vector>
 // #include <iterator>
 
+using std::cin;
 using std::cout; using std::endl;
 using std::string;
 using std::vector;
 
-// 3.21.cpp: In instantiation of ‘bool printInfo(const T&) [with T = std::vector<int>]’:
-// 3.21.cpp:44:17:   required from here
-// 3.21.cpp:24:12: error: request for member ‘empty’ in ‘* it.__gnu_cxx::__normal_iterator<const int*, std::vector< int> >::operator->()’, which is of non-class type ‘const int’
-//      if(it->empty())
-// template <typename T>
-// bool printInfo(vector<int> t) {
+using Veci = vector<int>;
 
-    // cout << "size, capacity, and values: " << t.size() << ", " << t.capacity() << ", " << endl;
+template<typename T>
+int printInfo(const T &t) {
 
-    // // if(t.empty())
-    // auto it = t.cbegin();
-    // // if(it->empty())
-    // if((*it).empty())
-        // return false;
+    // 判断对象是否为空
+    if(t.empty()) {
+    // if(t.cbegin() == t.cend()) {
 
-    // for(auto &i : t) {
+        cout << "Input vector is empty!" << endl;
+        return -1;
+    }
 
-        // cout << i << "\t";
-    // }
-    // cout << endl;
+    for(auto it = t.cbegin(); it != t.cend(); ++it) {
 
-    // return true;
-// }
+        cout << *it << ", ";
+    }
+    cout << endl;
+    
+    return 0;
+}
 
 int main() {
 
@@ -47,18 +46,13 @@ int main() {
     vector<string> v6 {10};     
     vector<string> v7 {10, "hi"};
     
-    auto it = v3.cbegin();
-    
-    // if(it->empty())
-        // return -1;
-    
-    // printInfo(v1);
-    // printInfo(v2);
-    // printInfo(v3);
-    // printInfo(v4);
-    // printInfo(v5);
-    // printInfo(v6);
-    // printInfo(v7);
+    printInfo(v1);
+    printInfo(v2);
+    printInfo(v3);
+    printInfo(v4);
+    printInfo(v5);
+    printInfo(v6);
+    printInfo(v7);
 
     return 0;
 }
